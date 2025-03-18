@@ -21,7 +21,6 @@
                         <h1>Tasks</h1>
                     </header>
                     <main>
-                        <h1>Datatables example</h1>
                         <table id="myTable" class="display">
                             <thead>
                                 <tr>
@@ -34,8 +33,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Task title here</td>
+                                <tr onclick="window.location.href='view-task.html'" style="cursor:pointer">
+                                    <td>Meet with Ben</td>
                                     <td>20.02.2025</td>
                                     <td>In progress</td>
                                     <td>High</td>
@@ -68,7 +67,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                            <button type="button" class="btn btn-primary" onclick="window.location.href='create-task.html'">+</button>
+                            <button type="button" class="btn btn-primary" onclick="window.location.href='create-tasks.html'">+</button>
                             <button type="button" class="btn btn-primary">Delete</button>
                     </main>
                 </section>
