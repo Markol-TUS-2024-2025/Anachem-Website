@@ -1,3 +1,53 @@
+/*Side menu*/
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const mobileNavList = document.getElementById('mobileNavList');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Toggle mobile menu
+    menuToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mobileNavList.classList.toggle('active');
+      hamburgerIcon.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const isClickInsideMenu = mobileNavList.contains(event.target);
+      const isClickInsideToggle = menuToggle.contains(event.target);
+      
+      if (!isClickInsideMenu && !isClickInsideToggle && mobileNavList.classList.contains('active')) {
+        mobileNavList.classList.remove('active');
+        hamburgerIcon.classList.remove('active');
+      }
+    });
+
+    // Prevent clicks within the menu from closing it
+    mobileNavList.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+
+    // Active link handling
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        // Remove active class from all links
+        navLinks.forEach(navLink => navLink.classList.remove('active'));
+        
+        // Add active class to clicked link
+        this.classList.add('active');
+        
+        // Close mobile menu if open
+        if (mobileNavList.classList.contains('active')) {
+          mobileNavList.classList.remove('active');
+          hamburgerIcon.classList.remove('active');
+        }
+      });
+    });
+  });
+  
+
 /** 
  * this file is for including javaScript files in our project
  * it is loaded in the html footer so that it doesn't slow down content loading (non-blocking)
@@ -92,8 +142,6 @@ jQuery(document).ready(function () {
         jQuery('#unit-price').html(unitCost);
         jQuery('#total').html(total);
     });
-
-
 
 
     // end jQuery
