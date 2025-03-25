@@ -117,49 +117,55 @@
                     <header>
                         <h1>Create Contact</h1>
                     </header>
-                    <main>
-                        <a href="contacts.html"><button class="cancelButton">Cancel</button></a>
+                    <main class="container-fluid">
+                        <a href="contacts.html"><button class="btn">Cancel</button></a>
                         <br/>
                         <br/>
-                        <form>
-                            <label> Enter Contact Name</label>
-                            <br/>
-                            <input type="text" placeholder="contacts name">
-                            <br/>
-
-                            <label> Enter Email</label>
-                            <br/>
-                            <input type="email" placeholder="email@mail.com">
-                            <br/>
-
-                            <label> Enter Phone Number</label>
-                            <br/>
-                            <input type="tel" placeholder="000 000 0000">
-                            <br/>
-
-                            <label> Choose Orders</label>
-                            <br/>
-                            <select multiple>
+                        <form class="row">
+                            <div class="col-6">
+                                <label> Enter Contact Name</label>
+                                <br/>
+                                <input type="text" placeholder="contacts name">
+                                <br/>
+                                <br/>
+                                <label> Enter Email</label>
+                                <br/>
+                                <input type="email" placeholder="email@mail.com">
+                                <br/>
+                                <br/>
+                                <label> Enter Phone Number</label>
+                                <br/>
+                                <input type="tel" placeholder="000 000 0000">
+                                <br/>
+                            </div>
+                            <div class="col-6">
+                                <label> Choose Orders</label>
+                                <br/>
+                                <select multiple>
                                 <option>None</option>
                                 <option>#QND103760</option>
                                 <option>#QND511700</option>
                                 <option>#QND785499</option>
                                 <option>#QND880359</option>
-                            </select>
-                            <br/>
+                                </select>
+                                <br/>
+                                <br/>
+                                <label> Enter Position</label>
+                                <br/>
+                                <input type="text" placeholder="position name">
+                                <br/>
+                                <br/>
+                                <label> Enter Company</label>
+                                <br/>
+                                <input type="text" placeholder="company name">
 
-                            <label> Enter Position</label>
-                            <br/>
-                            <input type="text" placeholder="position name">
-                            <br/>
-
-                            <label> Enter Company</label>
-                            <br/>
-                            <input type="text" placeholder="company name">
-
-                            <br/><br/>
-                            <input type="submit">
-                        </form>    
+                                <br/><br/>
+                            </div>
+                           
+                        </form> 
+                        <a href="contacts.html" class="col-1">
+                            <input type="submit" value="Save Contact" class="btn btn-primary icon-right">
+                        </a>   
                     </main>
                 </section>
             </div>

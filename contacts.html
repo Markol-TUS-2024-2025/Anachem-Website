@@ -48,7 +48,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="report-overview.html" class="nav-link">
+                                <a href="reports-salesperson.html" class="nav-link">
                                     <div class="nav-icon">
                                         <img src="icons/money-graph-bar--product-data-bars-analysis-analytics-graph-business-chart.svg"
                                             alt="Reports Icon">
@@ -118,9 +118,10 @@
                         <h1 class="heading">Contacts</h1>
                     </header>
                     <main>
-                        <table id="myTable" class="display">
+                        <table id="myTable" class="display deletable">
                             <thead>
                                 <tr>
+                                    <th><input type="checkbox" class="task-check"></th>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Phone Number</th>
@@ -131,6 +132,7 @@
                             </thead>
                             <tbody>
                                 <tr  onclick="window.location.href='contact-profile.html'" >
+                                    <td><input id="cb-one" type="checkbox" name="chkbx" class="task-check"></td>
                                     <td>John Bells</td>
                                     <td>Jbells@gmail.com</td>
                                     <td>076 876 9945</td>
@@ -139,6 +141,7 @@
                                     <td>Trusty Bank</td>
                                 </tr>
                                 <tr>
+                                    <td><input id="cb-two" type="checkbox" name="chkbx" class="task-check"></td>
                                     <td>Mary fisher</td>
                                     <td>fishywishy@outlook.com</td>
                                     <td>082 773 5511</td>
@@ -147,6 +150,7 @@
                                     <td>Bali Hotel</td>
                                 </tr>
                                 <tr>
+                                    <td><input id="cb-three" type="checkbox" name="chkbx" class="task-check"></td>
                                     <td>Billy Pike</td>
                                     <td>AppleSquash@gmail.com</td>
                                     <td>097 555 2339</td>
@@ -155,6 +159,7 @@
                                     <td>Healthy Teeth</td>
                                 </tr>
                                 <tr>
+                                    <td><input id="cb-four" type="checkbox" name="chkbx" class="task-check"></td>
                                     <td>Gwen Berry</td>
                                     <td>Gberry@outlook.com</td>
                                     <td>054 337 0908</td>
@@ -164,8 +169,12 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <a href="create-contact.html"><button class="createContact">+</button></a>
-                        <p>Create New Contact</p>
+                        
+                        <a href="create-contact.html"><button class="btn btn-primary icon-right">
+                            <span class="btn-icon"><svg></svg></span>
+                            Create New Contact
+                        </button></a>
+                        <button id="delete" type="button" class="btn btn-primary" style="float: right;">Delete</button>
                     </main>
                 </section> 
             </div>
