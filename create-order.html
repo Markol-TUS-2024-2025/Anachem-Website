@@ -145,7 +145,35 @@
                           </select>
                        
                           <br> <br>
-
+                          <h4>Select Product</h4>
+                          <table class="add-new">
+                              <tr>
+                                  <th>Product</th>
+                                  <th>Quantity</th>
+                                  <th>Unit Price</th>
+                                  <th>Total</th>
+                                  <th></th>
+                              </tr>
+                              <tr><td>
+                              <select name="product" id="product">
+                                  <option>Choose</option>
+                                  <option value="125.00">Detergent</option>
+                                  <option value="80.00">Sterilising Fluid</option>
+                                  <option value="65.00">Bleach</option>
+                              </select>
+                          </td>
+                          <td>
+                              <input type="number" value="1" step="1" name="quantity" id="qty" />
+                          </td>
+                          <td>
+                              <span id="unit-price">0</span>
+                          </td>
+                          <td>
+                              <span class="total" id="total">0</span>
+                          </td>
+                          <td>
+                              <button id="addRow"> + </button>
+                          </td>
                         <table id="table-with-total" class="display">
                             <thead>
                                 <tr>
@@ -165,36 +193,8 @@
                             </tfoot>
                         </table>
                         
-                        <h3>Add to Order</h3>
-                    <table class="add-new">
-                        <tr>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>Unit Price</th>
-                            <th>Total</th>
-                            <th></th>
-                        </tr>
-                        <tr><td>
-                        <select name="product" id="product">
-                            <option>Choose</option>
-                            <option value="125.00">Detergent</option>
-                            <option value="80.00">Sterilising Fluid</option>
-                            <option value="65.00">Bleach</option>
-                        </select>
-                    </td>
-                    <td>
-                        <input type="number" value="1" step="1" name="quantity" id="qty" />
-                    </td>
-                    <td>
-                        <span id="unit-price">0</span>
-                    </td>
-                    <td>
-                        <span class="total" id="total">0</span>
-                    </td>
-                    <td>
-                        <button id="addRow"> + </button>
-                    </td>
-                        <a href="orders.html">Create Order</a>
+                      
+                        <a href="orders.html">Add Order</a>
                     </main>
                 </section>
             </div>
