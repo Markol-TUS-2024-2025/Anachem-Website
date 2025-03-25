@@ -13,7 +13,7 @@
 
 ## Add this immediately after the `</header>` tag
 ```
-<input type="text" id="daterange" />
+<input type="text" id="daterange" placeholder="Filter by Date Range" />
 ```
 
 ## Add a class pickerTable to your `<table>`
