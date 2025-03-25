@@ -138,7 +138,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr onclick="window.location.href='view-task.html'" style="cursor:pointer">
+                                <tr>
                                     <td><input id="cb-one" type="checkbox" name="chkbx" class="task-check"></td>
                                     <td>2025-03-20</td>
                                     <td>Meet with Ben</td>
@@ -192,5 +192,15 @@
 
         <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.js"></script>
+        <script>
+            document.querySelectorAll('td').forEach(td => {
+                // Check if the <td> contains a checkbox
+                if (!td.querySelector('input[type="checkbox"]')) {
+                    td.addEventListener('click', () => {
+                        window.location.href = 'view-task.html';
+                    });
+                }
+            });
+        </script>
     </body>
     </html>
