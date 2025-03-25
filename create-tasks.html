@@ -12,12 +12,109 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <aside class="col-1">
-                    Sidebar
-                </aside>
+              <aside class="col-1">
+                <!-- Desktop Navigation -->
+                <nav class="navbar navbar-desktop">
+                    <div class="nav-brand">
+                        <a href="#">
+                            <img src="images/Logo.svg" alt="Anachem logo" width="80">
+                        </a>
+                    </div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="tasks.html" class="nav-link active">
+                                <div class="nav-icon">
+                                    <img src="icons/interface-text-formatting-list-bullets--points-bullet-unordered-list-lists-bullets.svg"
+                                        alt="Tasks Icon">
+                                </div> <span class="nav-text">Tasks</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="orders.html" class="nav-link">
+                                <div class="nav-icon">
+                                    <img src="icons/shopping-bag-suitcase-1--product-business-briefcase.svg"
+                                        alt="Orders Icon">
+                                </div>
+                                <span class="nav-text">Orders</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacts.html" class="nav-link">
+                                <div class="nav-icon">
+                                    <img src="icons/interface-user-multiple--close-geometric-human-multiple-person-up-user.svg"
+                                        alt="Contacts Icon">
+                                </div>
+                                <span class="nav-text">Contacts</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="report-overview.html" class="nav-link">
+                                <div class="nav-icon">
+                                    <img src="icons/money-graph-bar--product-data-bars-analysis-analytics-graph-business-chart.svg"
+                                        alt="Reports Icon">
+                                </div>
+                                <span class="nav-text">Reports</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Navigation -->
+
+                <nav class="navbar navbar-mobile">
+                    <div class="nav-brand">
+                        <h1>Dashboard</h1>
+                    </div>
+                    <button class="menu-toggle" id="menuToggle">
+                        <div class="hamburger" id="hamburgerIcon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                </nav>
+
+                <ul class="mobile-nav-list" id="mobileNavList">
+                    <li class="nav-item">
+                        <a href="tasks.html" class="nav-link active">
+                            <div class="nav-icon">
+                                <img src="icons/interface-text-formatting-list-bullets--points-bullet-unordered-list-lists-bullets.svg"
+                                    alt="Tasks Icon">
+                            </div>
+                            <span class="nav-text">Tasks</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="orders.html" class="nav-link">
+                            <div class="nav-icon">
+                                <img src="icons/shopping-bag-suitcase-1--product-business-briefcase.svg"
+                                    alt="Orders Icon">
+                            </div>
+                            <span class="nav-text">Orders</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacts.html" class="nav-link">
+                            <div class="nav-icon">
+                                <img src="icons/interface-user-multiple--close-geometric-human-multiple-person-up-user.svg"
+                                    alt="Contacts Icon">
+                            </div>
+                            <span class="nav-text">Contacts</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="report-overview.html" class="nav-link">
+                            <div class="nav-icon">
+                                <img src="icons/money-graph-bar--product-data-bars-analysis-analytics-graph-business-chart.svg"
+                                    alt="Reports Icon">
+                            </div>
+                            <span class="nav-text">Reports</span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
                 <section class="col-11">
                     <header>
-                        <img src="images/anachem-logo.png" alt="Anachem Logo">
                         <h1>Create new task</h1>
                     </header>
                     <main>
@@ -39,7 +136,7 @@
 
                           <div class="row">
                             <label for="status" class="col-sm-2 col-form-label">Status</label>
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <select class="form-select" id="autoSizingSelect">
                                     <option selected>Choose...</option>
                                     <option value="1">To-do</option>
@@ -51,7 +148,7 @@
 
                           <div class="row">
                             <label for="priority" class="col-sm-2 col-form-label">Prioroty</label>
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <select class="form-select" id="autoSizingSelect">
                                     <option selected>Choose...</option>
                                     <option value="1">High</option>
@@ -63,7 +160,7 @@
 
                           <div class="row">
                             <label for="contactLinked" class="col-sm-2 col-form-label">Contact linked</label>
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <select class="form-select" id="autoSizingSelect">
                                     <option selected>Choose...</option>
                                     <option value="1">None</option>
@@ -72,7 +169,7 @@
                                   </select>
                             </div>
                             <label for="location" class="col-sm-2 col-form-label">Location</label>
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <select class="form-select" id="autoSizingSelect">
                                     <option selected>Choose...</option>
                                     <option value="1">None</option>

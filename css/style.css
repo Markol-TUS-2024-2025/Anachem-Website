@@ -19,6 +19,10 @@ body {
   overflow-x: hidden;
 }
 
+aside {
+  padding: 0px !important;
+}
+
 h1 {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
@@ -254,4 +258,43 @@ h1 {
   .mobile-nav-list {
     display: flex;
   }
+}
+/*Orders Cards*/
+.summary-card {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 90px;
+}
+.summary-card .card-icon {
+  width: 32px;
+  height: 32px;
+  background: #3A89FF;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+.summary-card .card-content h5 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+.summary-card .card-content p {
+  margin: 0;
+  font-size: 0.8em;
+  color: #4E4E4E;
+}
+.summary-card .card-content .badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.summary-card .card-content .badge.positive {
+  background-color: #56B185;
+}
+.summary-card .card-content .badge.neutral {
+  background-color: #3FB7DC;
+}
+.summary-card .card-content .badge.negative {
+  background-color: #FA6F4F;
 }/*# sourceMappingURL=style.css.map */

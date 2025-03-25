@@ -13,11 +13,108 @@
         <div class="container-fluid">
             <div class="row">
                 <aside class="col-1">
-                    Sidebar
+                    <!-- Desktop Navigation -->
+                    <nav class="navbar navbar-desktop">
+                        <div class="nav-brand">
+                            <a href="#">
+                                <img src="images/Logo.svg" alt="Anachem logo" width="80">
+                            </a>
+                        </div>
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="tasks.html" class="nav-link">
+                                    <div class="nav-icon">
+                                        <img src="icons/interface-text-formatting-list-bullets--points-bullet-unordered-list-lists-bullets.svg"
+                                            alt="Tasks Icon">
+                                    </div> <span class="nav-text">Tasks</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="orders.html" class="nav-link active">
+                                    <div class="nav-icon">
+                                        <img src="icons/shopping-bag-suitcase-1--product-business-briefcase.svg"
+                                            alt="Orders Icon">
+                                    </div>
+                                    <span class="nav-text">Orders</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contacts.html" class="nav-link">
+                                    <div class="nav-icon">
+                                        <img src="icons/interface-user-multiple--close-geometric-human-multiple-person-up-user.svg"
+                                            alt="Contacts Icon">
+                                    </div>
+                                    <span class="nav-text">Contacts</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="report-overview.html" class="nav-link">
+                                    <div class="nav-icon">
+                                        <img src="icons/money-graph-bar--product-data-bars-analysis-analytics-graph-business-chart.svg"
+                                            alt="Reports Icon">
+                                    </div>
+                                    <span class="nav-text">Reports</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+    
+                    <!-- Mobile Navigation -->
+    
+                    <nav class="navbar navbar-mobile">
+                        <div class="nav-brand">
+                            <h1>Dashboard</h1>
+                        </div>
+                        <button class="menu-toggle" id="menuToggle">
+                            <div class="hamburger" id="hamburgerIcon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </button>
+                    </nav>
+    
+                    <ul class="mobile-nav-list" id="mobileNavList">
+                        <li class="nav-item">
+                            <a href="tasks.html" class="nav-link">
+                                <div class="nav-icon">
+                                    <img src="icons/interface-text-formatting-list-bullets--points-bullet-unordered-list-lists-bullets.svg"
+                                        alt="Tasks Icon">
+                                </div>
+                                <span class="nav-text">Tasks</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="orders.html" class="nav-link active">
+                                <div class="nav-icon">
+                                    <img src="icons/shopping-bag-suitcase-1--product-business-briefcase.svg"
+                                        alt="Orders Icon">
+                                </div>
+                                <span class="nav-text">Orders</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contacts.html" class="nav-link">
+                                <div class="nav-icon">
+                                    <img src="icons/interface-user-multiple--close-geometric-human-multiple-person-up-user.svg"
+                                        alt="Contacts Icon">
+                                </div>
+                                <span class="nav-text">Contacts</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="report-overview.html" class="nav-link">
+                                <div class="nav-icon">
+                                    <img src="icons/money-graph-bar--product-data-bars-analysis-analytics-graph-business-chart.svg"
+                                        alt="Reports Icon">
+                                </div>
+                                <span class="nav-text">Reports</span>
+                            </a>
+                        </li>
+                    </ul>
                 </aside>
                 <section class="col-11">
                     <header>
-                        <img src="images/anachem-logo.png" alt="Anachem Logo">
                         <h1>Create Order</h1>
                     </header>
                     <main>
@@ -47,7 +144,35 @@
                           </select>
                        
                           <br> <br>
-
+                          <h4>Select Product</h4>
+                          <table class="add-new">
+                              <tr>
+                                  <th>Product</th>
+                                  <th>Quantity</th>
+                                  <th>Unit Price</th>
+                                  <th>Total</th>
+                                  <th></th>
+                              </tr>
+                              <tr><td>
+                              <select name="product" id="product">
+                                  <option>Choose</option>
+                                  <option value="125.00">Detergent</option>
+                                  <option value="80.00">Sterilising Fluid</option>
+                                  <option value="65.00">Bleach</option>
+                              </select>
+                          </td>
+                          <td>
+                              <input type="number" value="1" step="1" name="quantity" id="qty" />
+                          </td>
+                          <td>
+                              <span id="unit-price">0</span>
+                          </td>
+                          <td>
+                              <span class="total" id="total">0</span>
+                          </td>
+                          <td>
+                              <button id="addRow"> + </button>
+                          </td>
                         <table id="table-with-total" class="display">
                             <thead>
                                 <tr>
@@ -67,36 +192,8 @@
                             </tfoot>
                         </table>
                         
-                        <h3>Add to Order</h3>
-                    <table class="add-new">
-                        <tr>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>Unit Price</th>
-                            <th>Total</th>
-                            <th></th>
-                        </tr>
-                        <tr><td>
-                        <select name="product" id="product">
-                            <option>Choose</option>
-                            <option value="125.00">Detergent</option>
-                            <option value="80.00">Sterilising Fluid</option>
-                            <option value="65.00">Bleach</option>
-                        </select>
-                    </td>
-                    <td>
-                        <input type="number" value="1" step="1" name="quantity" id="qty" />
-                    </td>
-                    <td>
-                        <span id="unit-price">0</span>
-                    </td>
-                    <td>
-                        <span class="total" id="total">0</span>
-                    </td>
-                    <td>
-                        <button id="addRow"> + </button>
-                    </td>
-                        <a href="orders.html">Create Order</a>
+                      
+                        <a href="orders.html">Add Order</a>
                     </main>
                 </section>
             </div>
