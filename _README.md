@@ -34,11 +34,13 @@ Save <span class="btn-icon">
 
 ```
 <script>
-// Select all <td> elements that do NOT have the class "check"
-document.querySelectorAll('td:not(.check)').forEach(td => {
-td.addEventListener('click', () => {
-window.location.href = 'view-task.html';
-});
-});
+    document.querySelectorAll('td').forEach(td => {
+        // Check if the <td> contains a checkbox
+        if (!td.querySelector('input[type="checkbox"]')) {
+            td.addEventListener('click', () => {
+                window.location.href = 'view-task.html';
+            });
+        }
+    });
 </script>
 ```
