@@ -121,6 +121,14 @@ jQuery(document).ready(function () {
         "lengthChange": false,
         "paging": false, // Disable pagination
         searching: false,
+        columnDefs: [
+            {
+                targets: [4, 5], // Change this to the column index you want to modify
+                render: function (data, type, row) {
+                    return type === 'display' ? '&euro;' + data : data;
+                }
+            }
+        ],
         "footerCallback": function (row, data, start, end, display) {
             var api = this.api(), data;
 
@@ -143,7 +151,7 @@ jQuery(document).ready(function () {
 
             // Update footer by showing the total with the reference of the column index 
             jQuery(api.column(0).footer()).html('Total');
-            jQuery(api.column(5).footer()).html(monTotal);
+            jQuery(api.column(5).footer()).html('&euro;' + monTotal);
         },
         "processing": true
     });
