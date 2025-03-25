@@ -54,6 +54,9 @@ body {
   height: 100vh;
   overflow-x: hidden;
 }
+aside{
+  padding: 0px !important;
+}
 
 h1 {
   font-family: "DM Sans", sans-serif;
@@ -304,5 +307,54 @@ h1 {
 
   .mobile-nav-list {
     display: flex;
+  }
+}
+
+/*Orders Cards*/
+.summary-card {
+  display: flex;
+  align-items: center;
+  border-radius: $border-radius-md;
+  padding: 16px;
+  min-height: 90px;
+
+  .card-icon {
+      width: 32px;
+      height: 32px;
+      background:$main-primary;
+      border-radius: $border-radius-sm;
+      margin-right: 12px;
+  }
+
+  .card-content {
+      h5 {
+          margin: 0;
+          font-weight: 700;
+          font-size: 18px;
+      }
+
+      p {
+          margin: 0;
+          font-size: 0.8em;
+          color: $text-muted;
+      }
+
+      .badge {
+          display: inline-block;
+          padding: 4px 8px;
+          border-radius:$border-radius-sm;
+
+          &.positive {
+              background-color:$success;
+          }
+
+          &.neutral {
+              background-color:$info;
+          }
+
+          &.negative {
+              background-color: $error;
+          }
+      }
   }
 }
