@@ -11,6 +11,12 @@ NOTE - Are we using Bootstrap? Should we create a sidebar, header, main and foot
 
 Code for the buttons:
 
+Primary button without an icon:
+<button class="btn btn-primary">Save</button>
+
+Secondary button without an icon:
+<button class="btn btn-secondary">Save</button>
+
 Primary button with an icon on the left:
 <button class="btn btn-primary icon-left">
 <span class="btn-icon">
