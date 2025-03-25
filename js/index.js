@@ -117,7 +117,10 @@ jQuery(document).ready(function () {
      * It allows us to add rows to the order table and calculate totals
      * Tables with this id will calculate the total (as long as the total is in column)
      */
-    jQuery('#table-with-total').DataTable({
+    var table = new DataTable('#table-with-total', {
+        "lengthChange": false,
+        "paging": false, // Disable pagination
+        searching: false,
         "footerCallback": function (row, data, start, end, display) {
             var api = this.api(), data;
 
@@ -146,7 +149,10 @@ jQuery(document).ready(function () {
     });
 
 
-    var table = new DataTable('#table-with-total');
+    /*var table = new DataTable('#table-with-total', {
+        lengthChange: false //remove the "entries per page" option
+    });*/
+
     /**
      * Add a new row
      */
