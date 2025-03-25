@@ -82,7 +82,34 @@ jQuery(document).ready(function () {
         });
     });
 
-    
+    /**
+     * enable the delete button if a checkbox is selected
+     */
+    // Select all checkboxes and the delete button
+    const checkboxes = document.querySelectorAll('input[name="chkbx"]');
+    const deleteButton = document.getElementById('delete');
+
+    function checkSelection() {
+        // Check if any checkbox is checked
+        const isChecked = [...checkboxes].some(checkbox => checkbox.checked);
+
+        // Enable or disable the delete button based on selection
+        if (isChecked) {
+            deleteButton.classList.remove('btn-disabled');
+            deleteButton.removeAttribute('disabled');
+        } else {
+            deleteButton.classList.add('btn-disabled');
+            deleteButton.setAttribute('disabled', 'true');
+        }
+    }
+
+    // Add event listener to all checkboxes
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', checkSelection);
+    });
+
+
+
     /**
      * This code is for the Create order form.
      * It allows us to add rows to the order table and calculate totals
