@@ -54,21 +54,31 @@ body {
   height: 100vh;
   overflow-x: hidden;
 }
-aside{
+
+aside {
   padding: 0px !important;
 }
 
+section{
+  padding:  20px 40px 40px 0px !important;
+}
+
 h1 {
-  font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+  padding-bottom: 20px;
 }
 
 .btn {
-  border-radius: $border-radius-sm;
-  font-weight: 600;
   transition: all 0.2s ease-in-out;
+  gap: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: $border-radius-md;
+  border: none;
+  cursor: pointer;
 
   &.btn-primary {
     background-color: $interactive;
@@ -87,18 +97,47 @@ h1 {
       color: lighten($text-muted, 50%);
       cursor: not-allowed;
     }
+
+    &.icon-left {
+      .btn-icon {
+        margin-right: 6px;
+      }
+    }
+
+    &.icon-right {
+      .btn-icon {
+        margin-left: 6px;
+      }
+    }
   }
+
 
   &.btn-secondary {
     background-color: transparent;
-    border-color: $text-primary;
+    border: 1px solid $text-primary;
     color: $text-primary;
 
     &:hover {
       background-color: $surface-blue;
     }
 
+    &.icon-left {
+      .btn-icon {
+        margin-right: 6px;
+      }
+    }
+
+    &.icon-right {
+      .btn-icon {
+        margin-left: 6px;
+      }
+    }
+
   }
+}
+
+.btn-icon {
+  display: inline-block;
 }
 
 
@@ -319,42 +358,42 @@ h1 {
   min-height: 90px;
 
   .card-icon {
-      width: 32px;
-      height: 32px;
-      background:$main-primary;
-      border-radius: $border-radius-sm;
-      margin-right: 12px;
+    width: 32px;
+    height: 32px;
+    background: $main-primary;
+    border-radius: $border-radius-sm;
+    margin-right: 12px;
   }
 
   .card-content {
-      h5 {
-          margin: 0;
-          font-weight: 700;
-          font-size: 18px;
+    h5 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.8em;
+      color: $text-muted;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: $border-radius-sm;
+
+      &.positive {
+        background-color: $success;
       }
 
-      p {
-          margin: 0;
-          font-size: 0.8em;
-          color: $text-muted;
+      &.neutral {
+        background-color: $info;
       }
 
-      .badge {
-          display: inline-block;
-          padding: 4px 8px;
-          border-radius:$border-radius-sm;
-
-          &.positive {
-              background-color:$success;
-          }
-
-          &.neutral {
-              background-color:$info;
-          }
-
-          &.negative {
-              background-color: $error;
-          }
+      &.negative {
+        background-color: $error;
       }
+    }
   }
 }
