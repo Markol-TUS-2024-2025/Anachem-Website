@@ -21,6 +21,13 @@
                         <h1>Heading</h1>
                     </header>
                     <main>
+
+                        <label for="date">Date</label>
+                        <input type="date" id="date"/><br/><br/>
+
+                        <label for="TA">Client</label>
+                        <input for="text" id="clientName"/>
+
                         <h1>Datatables example</h1>
                         <table id="myTable" class="display">
                             <thead>
@@ -91,5 +98,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
         <script src="js/index.js"></script>
+        <script>
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('date').value = today;
+
+            document.getElementById('clientName').value = "name of client";
+        </script>
     </body>
 </html>
