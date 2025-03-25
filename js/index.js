@@ -90,7 +90,6 @@ jQuery(document).ready(function () {
     const deleteButton = document.getElementById('delete');
 
     function checkSelection() {
-        alert("check");
         // Check if any checkbox is checked
         const isChecked = [...checkboxes].some(checkbox => checkbox.checked);
 
