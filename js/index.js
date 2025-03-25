@@ -147,6 +147,7 @@ jQuery(document).ready(function () {
     /**
      * Date range picker for the orders table
      */
+    if (document.getElementById("yourElementId")) {
     var pickerTable = jQuery('#pickerTable').DataTable();
 
     // Initialize the date range picker
@@ -174,7 +175,7 @@ jQuery(document).ready(function () {
         // Reset DataTable filter
         pickerTable.column(1).search('').draw();
     });
-
+  }
 
     // end jQuery
 });
