@@ -147,7 +147,7 @@ jQuery(document).ready(function () {
     /**
      * Date range picker for the orders table
      */
-    if (document.getElementById("yourElementId")) {
+    if (document.getElementById("pickerTable")) {
     var pickerTable = jQuery('#pickerTable').DataTable();
 
     // Initialize the date range picker
@@ -160,15 +160,26 @@ jQuery(document).ready(function () {
 
     // When a date range is selected
     jQuery('#daterange').on('apply.daterangepicker', function(ev, picker) {
-        // Get the start and end date
-        var startDate = picker.startDate.format('YYYY-MM-DD');
-        var endDate = picker.endDate.format('YYYY-MM-DD');
+      // Get the start and end date
+      var startDate = picker.startDate.format('YYYY-MM-DD');
+      var endDate = picker.endDate.format('YYYY-MM-DD');
 
-        console.log(startDate, endDate);
+      console.log(startDate, endDate);
 
-        // Filter the DataTable
-        pickerTable.column(1).search(startDate + '|' + endDate, true, false).draw();
-    });
+      // Filter the DataTable
+      pickerTable.rows().every(function() {
+          var row = this.node();
+          var date = jQuery(row).find('td').eq(1).text();  // Assuming the date is in the second column (index 1)
+
+          console.log(date);
+          // Check if the date falls within the range
+          if (date >= startDate && date <= endDate) {
+              jQuery(row).show();
+          } else {
+              jQuery(row).hide();
+          }
+      });
+  });
 
     // Clear filter when the cancel button is clicked
     jQuery('#daterange').on('cancel.daterangepicker', function(ev, picker) {
