@@ -62,7 +62,7 @@ jQuery(document).ready(function () {
     /**
      * This is to get the delete functionality working on the Tasks List page in tasks.html
      */
-    var taskTable = new DataTable('#taskTable');
+    var taskTable = new DataTable('.deletable');
 
     jQuery('#delete').on('click', function () {
         var data = taskTable
@@ -110,8 +110,8 @@ jQuery(document).ready(function () {
 
 
             // Update footer by showing the total with the reference of the column index 
-            $(api.column(0).footer()).html('Total');
-            $(api.column(5).footer()).html(monTotal);
+            jQuery(api.column(0).footer()).html('Total');
+            jQuery(api.column(5).footer()).html(monTotal);
         },
         "processing": true
     });
@@ -143,6 +143,39 @@ jQuery(document).ready(function () {
         jQuery('#total').html(total);
     });
 
+
+    /**
+     * Date range picker for the orders table
+     */
+    if (document.getElementById("yourElementId")) {
+    var pickerTable = jQuery('#pickerTable').DataTable();
+
+    // Initialize the date range picker
+    jQuery('#daterange').daterangepicker({
+        autoUpdateInput: false,
+        locale: {
+            cancelLabel: 'Clear'
+        }
+    });
+
+    // When a date range is selected
+    jQuery('#daterange').on('apply.daterangepicker', function(ev, picker) {
+        // Get the start and end date
+        var startDate = picker.startDate.format('YYYY-MM-DD');
+        var endDate = picker.endDate.format('YYYY-MM-DD');
+
+        console.log(startDate, endDate);
+
+        // Filter the DataTable
+        pickerTable.column(1).search(startDate + '|' + endDate, true, false).draw();
+    });
+
+    // Clear filter when the cancel button is clicked
+    jQuery('#daterange').on('cancel.daterangepicker', function(ev, picker) {
+        // Reset DataTable filter
+        pickerTable.column(1).search('').draw();
+    });
+  }
 
     // end jQuery
 });
