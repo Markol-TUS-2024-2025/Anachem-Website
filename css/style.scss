@@ -59,8 +59,8 @@ aside {
   padding: 0px !important;
 }
 
-section{
-  padding:  20px 40px 40px 0px !important;
+section {
+  padding: 20px 40px 40px 0px !important;
 }
 
 h1 {
@@ -68,6 +68,35 @@ h1 {
   font-weight: 700;
   font-style: normal;
   padding-bottom: 20px;
+}
+
+.btn-back {
+  transition: all 0.2s ease-in-out;
+  gap: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid $interactive;
+  border-radius: $border-radius-md;
+  color: $interactive;
+
+  &:hover {
+    background-color: $surface-blue;
+  }
+
+  &.icon-left {
+    .btn-icon {
+      margin-right: 6px;
+    }
+  }
+
+  &.icon-right {
+    .btn-icon {
+      margin-left: 6px;
+    }
+  }
 }
 
 .btn {
@@ -132,7 +161,6 @@ h1 {
         margin-left: 6px;
       }
     }
-
   }
 }
 
@@ -140,11 +168,29 @@ h1 {
   display: inline-block;
 }
 
-.form-control, .form-select{
-background-color: white;
-color: $text-primary;
-border: solid $border 1px;
-margin: 8px;
+.form-control,
+.form-select {
+  background-color: white;
+  color: $text-primary;
+  border: solid $border 1px;
+  margin: 8px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.breadcrumb-item .active {
+  color: $text-primary;
+}
+
+table.dataTable td.dt-type-date,
+table.dataTable th.dt-type-numeric,
+table.dataTable th.dt-type-date,
+table.dataTable td.dt-type-numeric,
+table.dataTable td.dt-type-date {
+  text-align: left;
 }
 
 /* Navigation Styles */

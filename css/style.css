@@ -34,6 +34,28 @@ h1 {
   padding-bottom: 20px;
 }
 
+.btn-back {
+  transition: all 0.2s ease-in-out;
+  gap: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #3A89FF;
+  border-radius: 12px;
+  color: #3A89FF;
+}
+.btn-back:hover {
+  background-color: #E7F4FF;
+}
+.btn-back.icon-left .btn-icon {
+  margin-right: 6px;
+}
+.btn-back.icon-right .btn-icon {
+  margin-left: 6px;
+}
+
 .btn {
   transition: all 0.2s ease-in-out;
   gap: 8px;
@@ -84,11 +106,29 @@ h1 {
   display: inline-block;
 }
 
-.form-control, .form-select {
+.form-control,
+.form-select {
   background-color: white;
   color: #2D2D2D;
   border: solid #d7dfe6 1px;
   margin: 8px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.breadcrumb-item .active {
+  color: #2D2D2D;
+}
+
+table.dataTable td.dt-type-date,
+table.dataTable th.dt-type-numeric,
+table.dataTable th.dt-type-date,
+table.dataTable td.dt-type-numeric,
+table.dataTable td.dt-type-date {
+  text-align: left;
 }
 
 /* Navigation Styles */
