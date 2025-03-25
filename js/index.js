@@ -229,7 +229,18 @@ jQuery(document).ready(function () {
         // Reset DataTable filter
         pickerTable.column(1).search('').draw();
     });
-  }
+    }
+
+
+    // Enable editing only for cells that have the "editable" attribute
+    document.querySelectorAll('table.editable td.editable').forEach(td => {
+        td.setAttribute('contenteditable', 'true');
+
+        // Optional: Listen for input changes
+        td.addEventListener('input', function () {
+            console.log('Updated content:', this.innerText);
+        });
+    });
 
     // end jQuery
 });
