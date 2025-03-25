@@ -17,7 +17,7 @@ $surface-beige: #FFDDC2; //Foreground surface colour 2
 $text-primary: #2D2D2D; //Main text colour
 $text-muted: #4E4E4E; //Less prominent text (e.g., descriptions)
 
-$border: #E7F4FF; //Default border colour
+$border: #d7dfe6; //Default border colour
 $divider: #F1F1F2; //Thin lines for section separation
 
 $interactive: #3A89FF; //Default interaction elements (buttons, links)
@@ -140,6 +140,12 @@ h1 {
   display: inline-block;
 }
 
+.form-control, .form-select{
+background-color: white;
+color: $text-primary;
+border: solid $border 1px;
+margin: 8px;
+}
 
 /* Navigation Styles */
 .navbar {

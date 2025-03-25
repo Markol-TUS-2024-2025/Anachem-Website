@@ -120,23 +120,23 @@
                     <main>
                         <br> 
                         <label for="customer">Choose a Customer</label> <br>
-                        <select id="customer" name="customer"> 
+                        <select class="form-select" id="customer" name="customer"> 
                           <option value="nexora">Nexora Solutions</option>
                           <option value="londis">Londis Clonmel</option>
                           <option value="talbot">Talbot Hotel Clonmel</option>
                           <option value="centra">Centra Clonmel</option>
-                        </select>  <br> <br>
+                        </select>  <br> 
 
-                        <form>
+                       <!-- <form>
                             <label for="fname">VAT Number:</label><br>
                             <input type="text" id="fname" name="fname"><br> 
 
                             <label for="lname">Invoice Address:</label><br>
                             <input type="text" id="lname" name="lname">
-                          </form>  
+                          </form>  -->
 
                           <label for="contact">Contact:</label> <br>
-                          <select id="contact" name="contact">
+                          <select class="form-select" id="contact" name="contact">
                             <option value="mary">Mary Williams</option>
                             <option value="jay">Jay Saunders</option>
                             <option value="amelia">Amelia Smith</option>
@@ -154,7 +154,7 @@
                                   <th></th>
                               </tr>
                               <tr><td>
-                              <select name="product" id="product">
+                              <select class="form-select" name="product" id="product">
                                   <option>Choose</option>
                                   <option value="125.00">Detergent</option>
                                   <option value="80.00">Sterilising Fluid</option>
@@ -162,7 +162,7 @@
                               </select>
                           </td>
                           <td>
-                              <input type="number" value="1" step="1" name="quantity" id="qty" />
+                              <input class="form-control" type="number" value="1" step="1" name="quantity" id="qty" />
                           </td>
                           <td>
                               <span id="unit-price">0</span>
@@ -171,7 +171,7 @@
                               <span class="total" id="total">0</span>
                           </td>
                           <td>
-                              <button id="addRow"> + </button>
+                              <button id="addRow" class="btn btn-secondary"> + </button>
                           </td>
                         <table id="table-with-total" class="display">
                             <thead>
