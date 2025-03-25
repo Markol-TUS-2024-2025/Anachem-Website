@@ -110,8 +110,8 @@ jQuery(document).ready(function () {
 
 
             // Update footer by showing the total with the reference of the column index 
-            $(api.column(0).footer()).html('Total');
-            $(api.column(5).footer()).html(monTotal);
+            jQuery(api.column(0).footer()).html('Total');
+            jQuery(api.column(5).footer()).html(monTotal);
         },
         "processing": true
     });
@@ -150,7 +150,7 @@ jQuery(document).ready(function () {
     var pickerTable = jQuery('#pickerTable').DataTable();
 
     // Initialize the date range picker
-    $('#daterange').daterangepicker({
+    jQuery('#daterange').daterangepicker({
         autoUpdateInput: false,
         locale: {
             cancelLabel: 'Clear'
@@ -158,7 +158,7 @@ jQuery(document).ready(function () {
     });
 
     // When a date range is selected
-    $('#daterange').on('apply.daterangepicker', function(ev, picker) {
+    jQuery('#daterange').on('apply.daterangepicker', function(ev, picker) {
         // Get the start and end date
         var startDate = picker.startDate.format('YYYY-MM-DD');
         var endDate = picker.endDate.format('YYYY-MM-DD');
@@ -170,7 +170,7 @@ jQuery(document).ready(function () {
     });
 
     // Clear filter when the cancel button is clicked
-    $('#daterange').on('cancel.daterangepicker', function(ev, picker) {
+    jQuery('#daterange').on('cancel.daterangepicker', function(ev, picker) {
         // Reset DataTable filter
         pickerTable.column(1).search('').draw();
     });
