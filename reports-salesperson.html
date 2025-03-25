@@ -120,9 +120,10 @@
                     </header>
                     <input type="text" id="daterange" />
                     <main>
-                        <table id="myTable" class="display pickerTable">
+                        <table id="myTable" class="display deletable pickerTable">
                             <thead>
                                 <tr>
+                                    <th><input type="checkbox" class="task-check"></th>
                                     <th>Title</th>
                                     <th>Dates</th>
                                     <th>Client</th>
@@ -132,6 +133,7 @@
                             </thead>
                             <tbody>
                                 <tr>
+                                    <td><input id="cb-one" type="checkbox" name="chkbx" class="task-check"></td>
                                     <td>Londis sale</td>
                                     <td>2025-03-03</td>
                                     <td>Londis</td>
@@ -139,6 +141,7 @@
                                     <td>€925</td>
                                 </tr>
                                 <tr>
+                                    <td><input id="cb-two" type="checkbox" name="chkbx" class="task-check"></td>
                                     <td>Tesco sale</td>
                                     <td>2025-02-20</td>
                                     <td>Tesco</td>
@@ -146,6 +149,7 @@
                                     <td>€1236</td>
                                 </tr>
                                 <tr>
+                                    <td><input id="cb-three" type="checkbox" name="chkbx" class="task-check"></td>
                                     <td>Imperial Hotel sale</td>
                                     <td>2025-01-21</td>
                                     <td>Imperial Hotel</td>
@@ -153,6 +157,7 @@
                                     <td>€549</td>
                                 </tr>
                                 <tr>
+                                    <td><input id="cb-four" type="checkbox" name="chkbx" class="task-check"></td>
                                     <td>New Park Hotel sale</td>
                                     <td>2025-01-12</td>
                                     <td>New Park Hotel</td>
@@ -160,6 +165,7 @@
                                     <td>€720</td>
                                 </tr>
                                 <tr>
+                                    <td><input id="cb-five" type="checkbox" name="chkbx" class="task-check"></td>
                                     <td>Total</td>
                                     <td></td>
                                     <td></td>
@@ -174,6 +180,7 @@
                         </p>
                         <button>Export</button>
                         <button>Create New Report</button>
+                        <button id="delete" type="button" class="btn btn-primary" style="float: right;">Delete</button>
                     </main>
                 </section>
             </div>
