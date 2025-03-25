@@ -118,7 +118,7 @@
                         <h1 class="heading">Contacts</h1>
                     </header>
                     <main>
-                        <table id="myTable" class="display">
+                        <table id="myTable" class="display deletable">
                             <thead>
                                 <tr>
                                     <th><input type="checkbox" class="task-check"></th>
@@ -169,8 +169,9 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <a href="create-contact.html"><button class="createContact">+</button></a>
-                        <p>Create New Contact</p>
+                        
+                        <a href="create-contact.html"><button class="btn btn-primary">Create New Contact</button></a>
+                        <button id="delete" type="button" class="btn btn-primary" style="float: right;">Delete</button>
                     </main>
                 </section> 
             </div>
