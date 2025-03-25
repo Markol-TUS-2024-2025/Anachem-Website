@@ -163,6 +163,8 @@ jQuery(document).ready(function () {
         var startDate = picker.startDate.format('YYYY-MM-DD');
         var endDate = picker.endDate.format('YYYY-MM-DD');
 
+        console.log(startDate, endDate);
+
         // Filter the DataTable
         pickerTable.column(1).search(startDate + '|' + endDate, true, false).draw();
     });
