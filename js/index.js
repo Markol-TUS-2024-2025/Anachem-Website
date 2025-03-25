@@ -80,6 +80,8 @@ jQuery(document).ready(function () {
                 .remove()
                 .draw();
         });
+
+        jQuery('#delete').addClass('disabled');
     });
 
     /**
