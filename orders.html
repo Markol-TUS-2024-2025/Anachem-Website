@@ -127,9 +127,10 @@
                         </div>
                     </div>
 
-                    <table id="myTable" class="display">
+                    <table id="myTable" class="display deletable">
                         <thead>
                             <tr>
+                                <th><input type="checkbox" class="task-check"></th>
                                 <th>Order ID</th>
                                 <th>Date</th>
                                 <th>Customer</th>
@@ -139,24 +140,28 @@
                         </thead>
                         <tbody>
                             <tr>
+                                <td><input id="cb-one" type="checkbox" name="chkbx" class="task-check"></td>
                                 <td>#QND485937</td>
                                 <td>17-09-24</td>
                                 <td>Nexora Solutions Ltd</td>
                                 <td>€20.00</td>
                             </tr>
                             <tr>
+                                <td><input id="cb-two" type="checkbox" name="chkbx" class="task-check"></td>
                                 <td>#QND840534</td>
                                 <td>09-03-24</td>
                                 <td>Nexora Solutions Ltd</td>
                                 <td>€20.00</td>
                             </tr>
                             <tr>
+                                <td><input id="cb-three" type="checkbox" name="chkbx" class="task-check"></td>
                                 <td>#QND285947</td>
                                 <td>01-11-24</td>
                                 <td>Nexora Solutions Ltd</td>
                                 <td>€20.00</td>
                             </tr>
                             <tr>
+                                <td><input id="cb-four" type="checkbox" name="chkbx" class="task-check"></td>
                                 <td>#QND274931</td>
                                 <td>08-03-24</td>
                                 <td>Nexora Solutions Ltd</td>
@@ -165,6 +170,7 @@
                         </tbody>
                     </table>
                     <a href="create-order.html">New Order +</a>
+                    <button id="delete" type="button" class="btn btn-primary" style="float: right;">Delete</button>
                 </main>
             </section>
         </div>
