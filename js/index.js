@@ -144,6 +144,36 @@ jQuery(document).ready(function () {
     });
 
 
+    /**
+     * Date range picker for the orders table
+     */
+    var pickerTable = jQuery('#pickerTable').DataTable();
+
+    // Initialize the date range picker
+    $('#daterange').daterangepicker({
+        autoUpdateInput: false,
+        locale: {
+            cancelLabel: 'Clear'
+        }
+    });
+
+    // When a date range is selected
+    $('#daterange').on('apply.daterangepicker', function(ev, picker) {
+        // Get the start and end date
+        var startDate = picker.startDate.format('YYYY-MM-DD');
+        var endDate = picker.endDate.format('YYYY-MM-DD');
+
+        // Filter the DataTable
+        pickerTable.column(1).search(startDate + '|' + endDate, true, false).draw();
+    });
+
+    // Clear filter when the cancel button is clicked
+    $('#daterange').on('cancel.daterangepicker', function(ev, picker) {
+        // Reset DataTable filter
+        pickerTable.column(1).search('').draw();
+    });
+
+
     // end jQuery
 });
 
