@@ -171,6 +171,7 @@ jQuery(document).ready(function () {
           var row = this.node();
           var date = jQuery(row).find('td').eq(1).text();  // Assuming the date is in the second column (index 1)
 
+          console.log(date);
           // Check if the date falls within the range
           if (date >= startDate && date <= endDate) {
               jQuery(row).show();
