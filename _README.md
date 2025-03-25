@@ -31,3 +31,16 @@ Save <span class="btn-icon">
 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 10 10" fill="none"><path d="M5 0.385742V9.67146" stroke="black" stroke-linecap="round" stroke-linejoin="round" /> <path d="M0.357422 5H9.64314" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </span>
 </button>
+
+```
+<script>
+    document.querySelectorAll('td').forEach(td => {
+        // Check if the <td> contains a checkbox
+        if (!td.querySelector('input[type="checkbox"]')) {
+            td.addEventListener('click', () => {
+                window.location.href = 'view-task.html';
+            });
+        }
+    });
+</script>
+```
