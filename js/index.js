@@ -90,15 +90,16 @@ jQuery(document).ready(function () {
     const deleteButton = document.getElementById('delete');
 
     function checkSelection() {
+        alert("check");
         // Check if any checkbox is checked
         const isChecked = [...checkboxes].some(checkbox => checkbox.checked);
 
         // Enable or disable the delete button based on selection
         if (isChecked) {
-            deleteButton.classList.remove('btn-disabled');
+            deleteButton.classList.remove('disabled');
             deleteButton.removeAttribute('disabled');
         } else {
-            deleteButton.classList.add('btn-disabled');
+            deleteButton.classList.add('disabled');
             deleteButton.setAttribute('disabled', 'true');
         }
     }
