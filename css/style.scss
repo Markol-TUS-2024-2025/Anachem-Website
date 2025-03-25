@@ -7,7 +7,7 @@
 
 /*Colours*/
 
-$main-primary:#3A89FF; //Main brand colour
+$main-primary: #3A89FF; //Main brand colour
 $main-accent: #FFC801; //Secondary brand colour
 $background: #FFFCF9; //Main background colour
 $surface-blue: #E7F4FF; //Foreground surface colour
@@ -61,6 +61,43 @@ h1 {
   font-weight: 700;
   font-style: normal;
 }
+
+.btn {
+  border-radius: $border-radius-sm;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+
+  &.btn-primary {
+    background-color: $interactive;
+    color: white;
+
+    &:hover {
+      background-color: $interactive-hover;
+    }
+
+    &:active {
+      background-color: $interactive-active;
+    }
+
+    &:disabled {
+      background-color: $interactive-disabled;
+      color: lighten($text-muted, 50%);
+      cursor: not-allowed;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: transparent;
+    border-color: $text-primary;
+    color: $text-primary;
+
+    &:hover {
+      background-color: $surface-blue;
+    }
+
+  }
+}
+
 
 /* Navigation Styles */
 .navbar {
@@ -168,7 +205,7 @@ h1 {
   text-align: center;
 }
 
-.nav-icon img{
+.nav-icon img {
   width: 20px;
   height: 20px;
 }

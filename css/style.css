@@ -26,6 +26,35 @@ h1 {
   font-style: normal;
 }
 
+.btn {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+.btn.btn-primary {
+  background-color: #3A89FF;
+  color: white;
+}
+.btn.btn-primary:hover {
+  background-color: #6EA8FF;
+}
+.btn.btn-primary:active {
+  background-color: #0A5DD9;
+}
+.btn.btn-primary:disabled {
+  background-color: #D3D3D3;
+  color: #cecece;
+  cursor: not-allowed;
+}
+.btn.btn-secondary {
+  background-color: transparent;
+  border-color: #2D2D2D;
+  color: #2D2D2D;
+}
+.btn.btn-secondary:hover {
+  background-color: #E7F4FF;
+}
+
 /* Navigation Styles */
 .navbar {
   background-color: #E7F4FF;
