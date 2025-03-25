@@ -123,11 +123,22 @@
                 </header>
                 <input type="text" id="daterange" placeholder="Filter by Date Range"/>
                 <main>
-                    <div class="card" style="width: 18rem;">
+                  
+                    <div class="card" style="width: 18rem; float:inline-start ">
                         <div class="card-body">
-                            <p class="card-text">154 orders made this month <br /> Up 15% from last month</p>
+                          <p class="card-text">134 orders completed this month <br/> Up 14% from last month</p>
                         </div>
-                    </div>
+                      </div>
+                      <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                          <p class="card-text">136 total orders this month <br/> Up 25% from last month</p>
+                        </div>
+                      </div>
+                      <div class="card" style="width: 18rem; " >
+                        <div class="card-body">
+                          <p class="card-text">€3,582 sales profit this month <br/> Down 10% from last month</p>
+                        </div>
+                      </div>
 
                     <table id="myTable" class="display deletable pickerTable">
                         <thead>
@@ -142,6 +153,14 @@
                         </thead>
                         <tbody>
                             <tr>
+                                <td><input id="cb-one" type="checkbox" name="chkbx" class="task-check"></td>
+                                <td onclick="location.href='report-overview.html';" style="cursor: pointer;">2025-03-03</td>
+                                <td onclick="location.href='report-overview.html';" style="cursor: pointer;">#QND485937</td>
+                                <td onclick="location.href='report-overview.html';" style="cursor: pointer;">Nexora Solutions Ltd</td>
+                                <td onclick="location.href='report-overview.html';" style="cursor: pointer;">€20.00</td>
+                            </tr>
+                            <tr>
+                               
                                 <td><input id="cb-one" type="checkbox" name="chkbx" class="task-check"></td>
                                 <td>2025-03-21</td>
                                 <td>#QND485937</td>
@@ -172,6 +191,14 @@
 
                                 <td>Nexora Solutions Ltd</td>
                                 <td>€20.00</td>
+                            </tr>
+                            <tr>
+                            <td>Total</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>€100.00</td>
+
                             </tr>
                         </tbody>
                     </table>
