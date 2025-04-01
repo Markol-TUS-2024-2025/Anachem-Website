@@ -251,3 +251,62 @@ jQuery(document).ready(function () {
 });
 
 
+/**
+ * Pie charts on Orders.html page
+ */
+
+new Chart(document.getElementById("pie-chart1"), {
+    type: 'pie',
+    data: {
+      labels: ["March", "April"],
+      datasets: [{
+        label: "Total Orders By Month",
+        backgroundColor: ["#BFD641", "#980678"],
+        data: [119,134]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Total Orders By Month'
+      }
+    }
+});
+
+// orders page - second pie chart
+new Chart(document.getElementById("pie-chart2"), {
+    type: 'pie',
+    data: {
+      labels: ["March", "April"],
+      datasets: [{
+        label: "Total Orders By Month",
+        backgroundColor: ["#52D0D2", "#FE9900"],
+        data: [109,152]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Total Orders By Month'
+      }
+    }
+});
+
+// orders page - third pie chart
+new Chart(document.getElementById("pie-chart3"), {
+    type: 'pie',
+    data: {
+      labels: ["March", "April"],
+      datasets: [{
+        label: "Total Orders By Month",
+        backgroundColor: ["#57CC2B", "#B63851"],
+        data: [143,113]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Total Orders By Month'
+      }
+    }
+});
