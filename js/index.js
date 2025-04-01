@@ -60,7 +60,7 @@ jQuery(document).ready(function () {
     jQuery('#myTable').DataTable({
         dom: 'Bfrtip', // Enables buttons
         buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
+            'excel', 'pdf'
         ]
     });
 
