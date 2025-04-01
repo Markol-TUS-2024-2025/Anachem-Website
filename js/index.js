@@ -58,11 +58,7 @@ jQuery(document).ready(function () {
      * This is for most datatables in the project
      */
     jQuery('#myTable').DataTable({
-        layout: {
-            topStart: {
-                buttons: ['excel', 'pdf']
-            }
-        }
+      buttons: ['excel', 'pdf']
     });
 
     /**
