@@ -57,7 +57,12 @@ jQuery(document).ready(function () {
     /**
      * This is for most datatables in the project
      */
-    jQuery('#myTable').DataTable();
+    jQuery('#myTable').DataTable({
+        dom: 'Bfrtip', // Enables buttons
+        buttons: [
+            'excel', 'pdf'
+        ]
+    });
 
     /**
      * This is to get the delete functionality working on the Tasks List page in tasks.html
@@ -242,7 +247,101 @@ jQuery(document).ready(function () {
         });
     });
 
+
+
+
+    /** Admin reports page
+     * Column filter
+     */
+    $(document).ready(function () {
+        var table = $('.columnFilter').DataTable();
+
+        // Function to populate dropdown with unique values from the "Position" column (index 1)
+        function populateDropdown() {
+            var uniquePositions = new Set();
+
+            // Extract unique values from column 2 (Sales Rep)
+            table.column(2).data().each(function (value) {
+                if (value && value.trim() !== "") { // Exclude empty values
+                    uniquePositions.add(value);
+                }
+            });
+
+            // Add options to dropdown
+            uniquePositions.forEach(function (val) {
+                $('#spFilter').append('<option value="' + val + '">' + val + '</option>');
+            });
+        }
+
+        populateDropdown(); // Populate the dropdown on page load
+
+        // Apply filtering when dropdown value changes
+        $('#spFilter').on('change', function () {
+            var selectedValue = $(this).val();
+            table.column(2).search(selectedValue).draw();
+        });
+    });
+
     // end jQuery
 });
 
 
+/**
+ * Pie charts on Orders.html page
+ */
+
+new Chart(document.getElementById("pie-chart1"), {
+    type: 'pie',
+    data: {
+      labels: ["March", "April"],
+      datasets: [{
+        label: "Total Orders By Month",
+        backgroundColor: ["#E22D51", "#6AC514"],
+        data: [119,134]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Total Orders By Month'
+      }
+    }
+});
+
+// orders page - second pie chart
+new Chart(document.getElementById("pie-chart2"), {
+    type: 'pie',
+    data: {
+      labels: ["March", "April"],
+      datasets: [{
+        label: "Total Orders By Month",
+        backgroundColor: ["#E22D51", "#6AC514"],
+        data: [109,152]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Total Orders By Month'
+      }
+    }
+});
+
+// orders page - third pie chart
+new Chart(document.getElementById("pie-chart3"), {
+    type: 'pie',
+    data: {
+      labels: ["March", "April"],
+      datasets: [{
+        label: "Total Orders By Month",
+        backgroundColor: ["#6AC514", "#E22D51"],
+        data: [123,113]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Total Orders By Month'
+      }
+    }
+});
