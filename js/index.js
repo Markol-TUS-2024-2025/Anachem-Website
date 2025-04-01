@@ -57,7 +57,13 @@ jQuery(document).ready(function () {
     /**
      * This is for most datatables in the project
      */
-    jQuery('#myTable').DataTable();
+    jQuery('#myTable').DataTable({
+        layout: {
+            topStart: {
+                buttons: ['excel', 'pdf']
+            }
+        }
+    });
 
     /**
      * This is to get the delete functionality working on the Tasks List page in tasks.html
