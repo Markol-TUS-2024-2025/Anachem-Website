@@ -62,8 +62,7 @@ jQuery(document).ready(function () {
         buttons: [
             'copy', 'csv', 'excel', 'pdf', 'print'
         ]
-    }
-});
+    });
 
     /**
      * This is to get the delete functionality working on the Tasks List page in tasks.html
