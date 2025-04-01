@@ -56,12 +56,14 @@ document.addEventListener('DOMContentLoaded', function() {
 jQuery(document).ready(function () {
     /**
      * This is for most datatables in the project
-     */{
+     */
+    jQuery('#myTable').DataTable({
         dom: 'Bfrtip', // Enables buttons
-            buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print'
-            ]
-    });
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    }
+});
 
     /**
      * This is to get the delete functionality working on the Tasks List page in tasks.html
