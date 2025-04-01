@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Orders</title>
     <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.2.2/css/buttons.dataTables.css" />
     <link href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -121,100 +122,107 @@
                 <header>
                     <h1>Orders</h1>
                 </header>
-                <input type="text" id="daterange" placeholder="Filter by Date Range"/>
+                <input type="text" id="daterange" placeholder="Filter by Date Range" />
                 <main>
-            
+
                     <div class="col">
                         <div class="card h-50">
-                          <div class="card-body">
-                            <p class="card-text">  134 orders completed this month <br/> Up 14% from last month</p>
-                          </div>
+                            <div class="card-body">
+                                <p class="card-text">  134 orders completed this month <br /> Up 14% from last month</p>
+                            </div>
                         </div>
 
                         <div class="col">
                             <div class="card h-50">
-                              <div class="card-body">
-                                <p class="card-text">   136 total orders this month <br/> Up 25% from last month</p>
-                              </div>
+                                <div class="card-body">
+                                    <p class="card-text">   136 total orders this month <br /> Up 25% from last month</p>
+                                </div>
                             </div>
 
                             <div class="col">
                                 <div class="card h-50">
-                                  <div class="card-body">
-                                    <p class="card-text">  €3,582 sales profit this month <br/> Down 10% from last month</p>
-                                  </div>
+                                    <div class="card-body">
+                                        <p class="card-text">  €3,582 sales profit this month <br /> Down 10% from last month</p>
+                                    </div>
                                 </div>
 
-                    <table id="myTable" class="display deletable pickerTable">
-                        <thead>
-                            <tr>
-                                <th><input type="checkbox" class="task-check"></th>
-                                <th>Date</th>
-                                <th>Order ID</th>
+                                <table id="myTable" class="display deletable pickerTable">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox" class="task-check"></th>
+                                            <th>Date</th>
+                                            <th>Order ID</th>
 
-                                <th>Customer</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><input id="cb-one" type="checkbox" name="chkbx" class="task-check"></td>
-                                <td onclick="location.href='report-overview.html';" style="cursor: pointer;">2025-03-03</td>
-                                <td onclick="location.href='report-overview.html';" style="cursor: pointer;">#QND485937</td>
-                                <td onclick="location.href='report-overview.html';" style="cursor: pointer;">Nexora Solutions Ltd</td>
-                                <td onclick="location.href='report-overview.html';" style="cursor: pointer;">€20.00</td>
-                            </tr>
-                            <tr>
-                               
-                                <td><input id="cb-one" type="checkbox" name="chkbx" class="task-check"></td>
-                                <td>2025-03-21</td>
-                                <td>#QND485937</td>
+                                            <th>Customer</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input id="cb-one" type="checkbox" name="chkbx" class="task-check"></td>
+                                            <td onclick="location.href='report-overview.html';" style="cursor: pointer;">2025-03-03</td>
+                                            <td onclick="location.href='report-overview.html';" style="cursor: pointer;">#QND485937</td>
+                                            <td onclick="location.href='report-overview.html';" style="cursor: pointer;">Nexora Solutions Ltd</td>
+                                            <td onclick="location.href='report-overview.html';" style="cursor: pointer;">€20.00</td>
+                                        </tr>
+                                        <tr>
 
-                                <td>Nexora Solutions Ltd</td>
-                                <td>€20.00</td>
-                            </tr>
-                            <tr>
-                                <td><input id="cb-two" type="checkbox" name="chkbx" class="task-check"></td>
-                                <td>2025-03-11</td>
-                                <td>#QND840534</td>
+                                            <td><input id="cb-one" type="checkbox" name="chkbx" class="task-check"></td>
+                                            <td>2025-03-21</td>
+                                            <td>#QND485937</td>
 
-                                <td>Nexora Solutions Ltd</td>
-                                <td>€20.00</td>
-                            </tr>
-                            <tr>
-                                <td><input id="cb-three" type="checkbox" name="chkbx" class="task-check"></td>
-                                <td>2025-02-25</td>
-                                <td>#QND285947</td>
+                                            <td>Nexora Solutions Ltd</td>
+                                            <td>€20.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="cb-two" type="checkbox" name="chkbx" class="task-check"></td>
+                                            <td>2025-03-11</td>
+                                            <td>#QND840534</td>
 
-                                <td>Nexora Solutions Ltd</td>
-                                <td>€20.00</td>
-                            </tr>
-                            <tr>
-                                <td><input id="cb-four" type="checkbox" name="chkbx" class="task-check"></td>
-                                <td>2025-02-10</td>
-                                <td>#QND274931</td>
+                                            <td>Nexora Solutions Ltd</td>
+                                            <td>€20.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="cb-three" type="checkbox" name="chkbx" class="task-check"></td>
+                                            <td>2025-02-25</td>
+                                            <td>#QND285947</td>
 
-                                <td>Nexora Solutions Ltd</td>
-                                <td>€20.00</td>
-                            </tr>
-                            <tr>
-                            <td>Total</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>€100.00</td>
+                                            <td>Nexora Solutions Ltd</td>
+                                            <td>€20.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="cb-four" type="checkbox" name="chkbx" class="task-check"></td>
+                                            <td>2025-02-10</td>
+                                            <td>#QND274931</td>
 
-                            </tr>
-                        </tbody>
-                    </table>
-                    <a href="create-order.html" class="btn btn-primary">New Order +</a>
-                    <button id="delete" type="button" class="btn btn-secondary disabled" style="float: right;">Delete</button>
+                                            <td>Nexora Solutions Ltd</td>
+                                            <td>€20.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>€100.00</td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <a href="create-order.html" class="btn btn-primary">New Order +</a>
+                                <button id="delete" type="button" class="btn btn-secondary disabled" style="float: right;">Delete</button>
                 </main>
             </section>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.2/js/dataTables.buttons.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.2/js/buttons.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.2.2/js/buttons.print.min.js"></script>
     <script src="js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.js"></script>
