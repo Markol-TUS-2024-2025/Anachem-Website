@@ -296,7 +296,7 @@ new Chart(document.getElementById("pie-chart1"), {
       labels: ["March", "April"],
       datasets: [{
         label: "Total Orders By Month",
-        backgroundColor: ["#059A05", "#B41212"],
+        backgroundColor: [ "#B41212","#059A05"],
         data: [119,134]
       }]
     },
@@ -315,7 +315,7 @@ new Chart(document.getElementById("pie-chart2"), {
       labels: ["March", "April"],
       datasets: [{
         label: "Total Orders By Month",
-        backgroundColor: ["#059A05", "#B41212"],
+        backgroundColor: ["#B41212","#059A05" ],
         data: [109,152]
       }]
     },
@@ -334,7 +334,7 @@ new Chart(document.getElementById("pie-chart3"), {
       labels: ["March", "April"],
       datasets: [{
         label: "Total Orders By Month",
-        backgroundColor: ["#B41212", "#059A05"],
+        backgroundColor: ["#059A05","#B41212"],
         data: [123,113]
       }]
     },
