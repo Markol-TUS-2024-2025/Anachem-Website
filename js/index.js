@@ -56,9 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
 jQuery(document).ready(function () {
     /**
      * This is for most datatables in the project
-     */
-    jQuery('#myTable').DataTable({
-      buttons: ['excel', 'pdf']
+     */{
+        dom: 'Bfrtip', // Enables buttons
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
     });
 
     /**
