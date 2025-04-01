@@ -119,8 +119,14 @@
                         <h1>Sales Reports (Admin)</h1>
                     </header>
                     <main>
-                      
-                        <table id="myTable" class="display">
+                        <label>
+                            Filter by Salesperson:
+                            <select id="spFilter">
+                                <option value="">All</option>
+                            </select>
+                        </label>
+
+                        <table id="myTable" class="display columnFilter">
                             <thead>
                                 <tr>
                                     <th>Title</th>
@@ -134,35 +140,43 @@
                             <tbody>
                                 <tr>
                                     <td>Londis sale</td>
-                                    <td>03.03.2025</td>
-                                    <td>Connor</td>
+                                    <td>2025-03-01</td>
+                                    <td>Conor Ryan</td>
                                     <td>Londis</td>
                                     <td>Clonmel</td>
                                     <td>€925</td>
                                 </tr>
                                 <tr>
                                     <td>Tesco sale</td>
-                                    <td>20.02.2025</td>
-                                    <td>Emily</td>
+                                    <td>2025-03-01</td>
+                                    <td>Emily Reidy</td>
                                     <td>Tesco</td>
                                     <td>Offaly</td>
                                     <td>€1236</td>
                                 </tr>
                                 <tr>
                                     <td>Imperial Hotel sale</td>
-                                    <td>21.01.2025</td>
-                                    <td>Evan</td>
+                                    <td>2025-03-09</td>
+                                    <td>Evan Power</td>
                                     <td>Imperial Hotel</td>
                                     <td>Cork</td>
                                     <td>€549</td>
                                 </tr>
                                 <tr>
                                     <td>New Park Hotel sale</td>
-                                    <td>12.01.2025</td>
-                                    <td>Hugh</td>
+                                    <td>2025-03-11</td>
+                                    <td>Hugh Lawless</td>
                                     <td>New Park Hotel</td>
                                     <td>Kilkenny</td>
                                     <td>€720</td>
+                                </tr>
+                                <tr>
+                                    <td>Centra Thurles sale</td>
+                                    <td>2025-03-21</td>
+                                    <td>Conor Ryan</td>
+                                    <td>Centra</td>
+                                    <td>Thurles</td>
+                                    <td>€540</td>
                                 </tr>
                                 <tr>
                                     <td>Total</td>
