@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Create Tasks</title>
+        <title>Sign Up</title>
         <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css" />
@@ -37,32 +37,15 @@
                         <h1>Login</h1>
                     </header>
                     <main>
-                        <div class="card">
-                            <form class="card-body">
-                                <div class="row">
-                                    <label for="username" class="col-sm-2 col-form-label card-text">Username</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" id="username" name="username" class="form-control" placeholder="Enter username/email address" aria-label="username">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <label for="password" class="col-sm-2 col-form-label card-text">Password</label>
-                                    <div class="col-sm-10">
-                                        <input type="password" id="password" name="password" class="form-control" placeholder="Enter password" aria-label="password">
-                                    </div>
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col-12">
-                                        <button class="btn btn-primary" type="submit" formaction="login-result.html">LOG IN</button>
-                                    </div>
-                                </div>
-                                <div class="row"> 
-                                    <p class="card-text">Don't have an account yet? <a href="sign-up.html">Click here</a> to sign up!</p>
-                                </div>
-                           </form>
+                        <div style="text-align: center; padding: 5%;" class="card">
+                            <p>
+                                You have successfully logged in! Click the button below to head to your dashboard and see your tasks! 
+                            </p>
+                            <p>
+                                <button class="btn btn-primary" onclick="location.href='tasks.html';">GO TO DASHBOARD</button>
+                            </p>
+                        </main>
                         </div>
-                    </main>
                 </section>
             </div>
         </div>
