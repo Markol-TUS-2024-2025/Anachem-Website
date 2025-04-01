@@ -68,7 +68,13 @@ jQuery(document).ready(function () {
     /**
      * This is to get the delete functionality working on the Tasks List page in tasks.html
      */
-    var taskTable = new DataTable('.deletable');
+    var taskTable = new DataTable('.deletable', {
+        layout: {
+            topStart: {
+                buttons: ['excel', 'pdf']
+            }
+        }
+    });
 
     jQuery('#delete').on('click', function () {
         var data = taskTable
