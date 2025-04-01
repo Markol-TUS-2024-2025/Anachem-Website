@@ -247,6 +247,41 @@ jQuery(document).ready(function () {
         });
     });
 
+
+
+
+    /** Admin reports page
+     * Column filter
+     */
+    $(document).ready(function () {
+        var table = $('.columnFilter').DataTable();
+
+        // Function to populate dropdown with unique values from the "Position" column (index 1)
+        function populateDropdown() {
+            var uniquePositions = new Set();
+
+            // Extract unique values from column 2 (Sales Rep)
+            table.column(2).data().each(function (value) {
+                if (value && value.trim() !== "") { // Exclude empty values
+                    uniquePositions.add(value);
+                }
+            });
+
+            // Add options to dropdown
+            uniquePositions.forEach(function (val) {
+                $('#spFilter').append('<option value="' + val + '">' + val + '</option>');
+            });
+        }
+
+        populateDropdown(); // Populate the dropdown on page load
+
+        // Apply filtering when dropdown value changes
+        $('#spFilter').on('change', function () {
+            var selectedValue = $(this).val();
+            table.column(2).search(selectedValue).draw();
+        });
+    });
+
     // end jQuery
 });
 
