@@ -13,42 +13,61 @@
         <div class="container-fluid">
             <div class="row">
                 <aside class="col-1">
-                    Sidebar
+                    <!-- Desktop Navigation -->
+                    <nav class="navbar navbar-desktop">
+                        <div class="nav-brand">
+                            <a href="#">
+                                <img src="images/Logo.svg" alt="Anachem logo" width="80">
+                            </a>
+                        </div>
+                    </nav>
+    
+                    <!-- Mobile Navigation -->
+    
+                    <nav class="navbar navbar-mobile">
+                        <div class="nav-brand">
+                            <a href="#">
+                                <img src="images/Logo.svg" alt="Anachem logo" width="80">
+                            </a>
+                        </div>
+                    </nav>
                 </aside>
                 <section class="col-11">
                     <header>
                         <h1>Create an Account</h1>
                     </header>
                     <main>
-                        <form>
-                            <div class="row">
-                                <label for="username" class="col-sm-2 col-form-label">Username</label>
-                                <div class="col-sm-10">
-                                    <input type="text" id="username" name="username" class="form-control" placeholder="Choose a username" aria-label="username">
+                        <div class="card">
+                            <form class="card-body">
+                                <div class="row">
+                                    <label for="username" class="col-sm-2 col-form-label card-text">Username</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" id="username" name="username" class="form-control" placeholder="Choose a username" aria-label="username">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <label for="username" class="col-sm-2 col-form-label">Email Address</label>
-                                <div class="col-sm-10">
-                                    <input type="text" id="username" name="username" class="form-control" placeholder="Enter your email address" aria-label="email">
+                                <div class="row">
+                                    <label for="username" class="col-sm-2 col-form-label card-text">Email Address</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" id="username" name="username" class="form-control" placeholder="Enter your email address" aria-label="email">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <label for="password" class="col-sm-2 col-form-label">Password</label>
-                                <div class="col-sm-10">
-                                    <input type="password" id="password" name="password" class="form-control" placeholder="Choose a password" aria-label="password">
+                                <div class="row">
+                                    <label for="password" class="col-sm-2 col-form-label card-text">Password</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" id="password" name="password" class="form-control" placeholder="Choose a password" aria-label="password">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <button class="btn btn-primary" type="submit">CREATE YOUR ACCOUNT</button>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <button class="btn btn-primary " type="submit" formaction="sign-up-result.html">CREATE YOUR ACCOUNT</button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <p>Already have an account? <a href="login.html">Click here</a> to sign in!</p>
-                            </div>
-                       </form>
-                    </main>
+                                <div class="row">
+                                    <p class="card-text">Already have an account? <a href="index.html">Click here</a> to sign in!</p>
+                                </div>
+                           </form>
+                        </main>
+                        </div>
                 </section>
             </div>
         </div>
