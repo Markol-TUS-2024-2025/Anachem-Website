@@ -334,7 +334,7 @@ new Chart(document.getElementById("pie-chart3"), {
       labels: ["March", "April"],
       datasets: [{
         label: "Total Orders By Month",
-        backgroundColor: ["#059A05","#B41212"],
+        backgroundColor: ["#B41212","#059A05"],
         data: [123,113]
       }]
     },
